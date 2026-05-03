@@ -105,7 +105,6 @@
   .summary-card { background: var(--surface); border-radius: 16px; padding: 20px; border: 1px solid var(--border); }
   .summary-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 12px; }
   .summary-text { font-size: 12px; line-height: 1.8; color: var(--text); }
-  .summary-text strong { color: var(--accent); }
   .risk-row { display: flex; gap: 10px; margin-top: 14px; }
   .risk-box { flex: 1; background: var(--surface2); border-radius: 10px; padding: 12px; border: 1px solid var(--border); text-align: center; }
   .risk-label { font-size: 9px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
@@ -116,7 +115,7 @@
   .reset-btn:active { border-color: var(--accent); color: var(--accent); }
   .error-card { display: none; margin: 20px; padding: 20px; background: rgba(255,77,109,0.06); border: 1.5px solid rgba(255,77,109,0.3); border-radius: 16px; color: var(--put); font-size: 12px; line-height: 1.6; }
   .error-card.active { display: block; }
-  .disclaimer { margin: 20px; padding: 14px; background: rgba(255,209,102,0.04); border: 1px solid rgba(255,209,102,0.15); border-radius: 10px; font-size: 9px; color: var(--muted); line-height: 1.6; letter-spacing: 0.5px; }
+  .disclaimer { margin: 20px; padding: 14px; background: rgba(255,209,102,0.04); border: 1px solid rgba(255,209,102,0.15); border-radius: 10px; font-size: 9px; color: var(--muted); line-height: 1.6; }
   .disclaimer strong { color: var(--gold); }
   .install-banner { display: none; margin: 16px 20px 0; padding: 14px 16px; background: linear-gradient(135deg, rgba(0,229,255,0.08), rgba(255,77,109,0.08)); border: 1.5px solid var(--accent); border-radius: 14px; align-items: center; gap: 12px; position: relative; }
   .install-banner.visible { display: flex; }
@@ -124,12 +123,11 @@
   .install-text { flex: 1; }
   .install-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 12px; color: var(--accent); letter-spacing: 1px; margin-bottom: 2px; }
   .install-sub { font-size: 10px; color: var(--muted); line-height: 1.4; }
-  .install-btn { background: var(--accent); color: #000; border: none; border-radius: 8px; padding: 8px 14px; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1px; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
-  .install-close { position: absolute; top: 8px; right: 10px; font-size: 16px; color: var(--muted); cursor: pointer; background: none; border: none; padding: 0; line-height: 1; }
+  .install-btn { background: var(--accent); color: #000; border: none; border-radius: 8px; padding: 8px 14px; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 11px; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+  .install-close { position: absolute; top: 8px; right: 10px; font-size: 16px; color: var(--muted); cursor: pointer; background: none; border: none; }
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 999; align-items: flex-end; justify-content: center; }
   .modal-overlay.active { display: flex; }
-  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 20px 20px 0 0; padding: 28px 24px 40px; width: 100%; max-width: 480px; animation: slideUp 0.3s ease; }
-  @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 20px 20px 0 0; padding: 28px 24px 40px; width: 100%; max-width: 480px; }
   .modal-handle { width: 40px; height: 4px; background: var(--border); border-radius: 4px; margin: 0 auto 20px; }
   .modal-title { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 3px; color: var(--accent); margin-bottom: 6px; }
   .modal-sub { font-size: 11px; color: var(--muted); margin-bottom: 20px; }
@@ -138,10 +136,9 @@
   .step-num { width: 28px; height: 28px; border-radius: 50%; background: rgba(0,229,255,0.1); border: 1px solid var(--accent); color: var(--accent); font-family: 'Syne', sans-serif; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .step-text { font-size: 12px; color: var(--text); line-height: 1.6; padding-top: 4px; }
   .step-text strong { color: var(--accent); }
-  .modal-close-btn { width: 100%; padding: 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; color: var(--muted); font-family: 'Syne', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 2px; cursor: pointer; }
+  .modal-close-btn { width: 100%; padding: 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; color: var(--muted); font-family: 'Syne', sans-serif; font-weight: 700; font-size: 12px; cursor: pointer; }
   .scanline { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); animation: scan 4s linear infinite; opacity: 0.3; pointer-events: none; z-index: 999; }
   @keyframes scan { 0% { top: 0; } 100% { top: 100vh; } }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 </head>
 <body>
@@ -159,9 +156,9 @@
     <div class="install-icon">📲</div>
     <div class="install-text">
       <div class="install-title">ADD TO HOME SCREEN</div>
-      <div class="install-sub">Open like a real app — no App Store needed</div>
+      <div class="install-sub">Open like a real app</div>
     </div>
-    <button class="install-btn" id="installBtn" onclick="triggerInstall()">INSTALL</button>
+    <button class="install-btn" onclick="triggerInstall()">INSTALL</button>
     <button class="install-close" onclick="dismissBanner()">✕</button>
   </div>
 
@@ -171,10 +168,10 @@
       <div class="modal-title">ADD TO HOME SCREEN</div>
       <div class="modal-sub">Follow these steps in Chrome on Android</div>
       <div class="step-list">
-        <div class="step-item"><div class="step-num">1</div><div class="step-text">Tap the <strong>⋮ three-dot menu</strong> in the top-right corner of Chrome</div></div>
-        <div class="step-item"><div class="step-num">2</div><div class="step-text">Tap <strong>"Add to Home screen"</strong> from the menu</div></div>
-        <div class="step-item"><div class="step-num">3</div><div class="step-text">Tap <strong>"Add"</strong> when the prompt appears</div></div>
-        <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>SPY Edge</strong> will appear on your home screen like a real app</div></div>
+        <div class="step-item"><div class="step-num">1</div><div class="step-text">Tap the <strong>⋮ three-dot menu</strong> in Chrome</div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-text">Tap <strong>"Add to Home screen"</strong></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-text">Tap <strong>"Add"</strong> to confirm</div></div>
+        <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>SPY Edge</strong> appears on your home screen</div></div>
       </div>
       <button class="modal-close-btn" onclick="document.getElementById('modalOverlay').classList.remove('active')">GOT IT</button>
     </div>
@@ -206,12 +203,12 @@
   <div class="loading" id="loading">
     <div class="section-label">AI READING MARKET STRUCTURE</div>
     <div class="loading-bar"><div class="loading-fill"></div></div>
-    <div class="loading-text" id="loadingText">INITIALIZING...</div>
+    <div class="loading-text">ANALYZING...</div>
     <div class="loading-steps">
       <div class="loading-step" id="step1">▸ Reading price action & structure</div>
-      <div class="loading-step" id="step2">▸ Analyzing trend indicators (EMA/VWAP/MACD)</div>
+      <div class="loading-step" id="step2">▸ Analyzing trend indicators</div>
       <div class="loading-step" id="step3">▸ Evaluating options chain & Greeks</div>
-      <div class="loading-step" id="step4">▸ Checking GEX / Vanna / Charm dynamics</div>
+      <div class="loading-step" id="step4">▸ Checking GEX / Vanna / Charm</div>
       <div class="loading-step" id="step5">▸ Scoring confidence & generating signal</div>
     </div>
   </div>
@@ -236,7 +233,7 @@
       <div class="indicators-title">Indicator Breakdown</div>
       <div class="indicator-list" id="indicatorList"></div>
     </div>
-    <div class="contract-card" id="contractCard">
+    <div class="contract-card">
       <div class="contract-title">Recommended Contract</div>
       <div class="contract-rec" id="contractRec">SPY 585C — 0DTE</div>
       <div class="contract-details" id="contractDetails"></div>
@@ -249,69 +246,38 @@
     <button class="reset-btn" onclick="reset()">↺ ANALYZE NEW SCREENSHOTS</button>
   </div>
 
-  <div class="disclaimer"><strong>⚠ RISK DISCLOSURE:</strong> SPY Edge is an analytical tool only. All signals are AI-generated estimates — not financial advice. Options trading involves substantial risk of loss. Past signal accuracy does not guarantee future results. Never trade more than you can afford to lose.</div>
+  <div class="disclaimer"><strong>⚠ RISK DISCLOSURE:</strong> SPY Edge is an analytical tool only. All signals are AI-generated estimates — not financial advice. Options trading involves substantial risk of loss. Never trade more than you can afford to lose.</div>
 </div>
 
 <script>
 let deferredPrompt = null;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  document.getElementById('installBanner').classList.add('visible');
-});
-window.addEventListener('appinstalled', () => {
-  document.getElementById('installBanner').classList.remove('visible');
-  deferredPrompt = null;
-});
-async function triggerInstall() {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === 'accepted') document.getElementById('installBanner').classList.remove('visible');
-    deferredPrompt = null;
-  } else { showInstallModal(); }
-}
+window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; document.getElementById('installBanner').classList.add('visible'); });
+window.addEventListener('appinstalled', () => { document.getElementById('installBanner').classList.remove('visible'); deferredPrompt = null; });
+async function triggerInstall() { if (deferredPrompt) { deferredPrompt.prompt(); const { outcome } = await deferredPrompt.userChoice; if (outcome === 'accepted') document.getElementById('installBanner').classList.remove('visible'); deferredPrompt = null; } else { showInstallModal(); } }
 function showInstallModal() { document.getElementById('modalOverlay').classList.add('active'); }
 function closeModal(e) { if (e.target === document.getElementById('modalOverlay')) document.getElementById('modalOverlay').classList.remove('active'); }
 function dismissBanner() { document.getElementById('installBanner').classList.remove('visible'); }
 
-let chartData = null;
-let chainData = null;
+let chartData = null, chainData = null;
 
 function fileToBase64(file) {
-  return new Promise((res, rej) => {
-    const r = new FileReader();
-    r.onload = () => res(r.result.split(',')[1]);
-    r.onerror = rej;
-    r.readAsDataURL(file);
-  });
+  return new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result.split(',')[1]); r.onerror = rej; r.readAsDataURL(file); });
 }
 
 function setupUpload(inputId, boxId, previewId, onLoad) {
-  const input = document.getElementById(inputId);
-  const box = document.getElementById(boxId);
-  const preview = document.getElementById(previewId);
-  input.addEventListener('change', async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    preview.src = URL.createObjectURL(file);
-    box.classList.add('has-image');
-    const b64 = await fileToBase64(file);
-    onLoad({ base64: b64, type: file.type });
-    checkReady();
+  document.getElementById(inputId).addEventListener('change', async (e) => {
+    const file = e.target.files[0]; if (!file) return;
+    document.getElementById(previewId).src = URL.createObjectURL(file);
+    document.getElementById(boxId).classList.add('has-image');
+    onLoad({ base64: await fileToBase64(file), type: file.type });
+    document.getElementById('analyzeBtn').disabled = false;
   });
 }
 
 setupUpload('chartInput', 'chartBox', 'chartPreview', d => { chartData = d; });
 setupUpload('chainInput', 'chainBox', 'chainPreview', d => { chainData = d; });
 
-function checkReady() {
-  document.getElementById('analyzeBtn').disabled = !(chartData || chainData);
-}
-
-function setStep(n) {
-  for (let i = 1; i <= 5; i++) document.getElementById('step' + i).classList.toggle('active', i === n);
-}
+function setStep(n) { for (let i=1;i<=5;i++) document.getElementById('step'+i).classList.toggle('active', i===n); }
 
 async function analyze() {
   document.getElementById('uploadSection').style.display = 'none';
@@ -319,26 +285,29 @@ async function analyze() {
   document.getElementById('loading').classList.add('active');
   document.getElementById('results').classList.remove('active');
   document.getElementById('errorCard').classList.remove('active');
-  let step = 1; setStep(step);
-  const stepInterval = setInterval(() => { step++; if (step <= 5) setStep(step); }, 1400);
+  let step = 1; setStep(1);
+  const si = setInterval(() => { step++; if(step<=5) setStep(step); }, 1400);
+
   const content = [];
-  if (chartData) content.push({ type: 'image', source: { type: 'base64', media_type: chartData.type, data: chartData.base64 } });
-  if (chainData) content.push({ type: 'image', source: { type: 'base64', media_type: chainData.type, data: chainData.base64 } });
-  content.push({ type: 'text', text: `You are SPY Edge, an elite SPY options trading signal AI. Analyze the uploaded screenshot(s) and produce a complete trading signal across ALL of these categories: TREND (Price vs VWAP, EMA 8/21/100/200, HMA, BOS/CHOCH, Wyckoff phase), MOMENTUM (RSI, MACD, Squeeze), STRUCTURE (S/R levels, FVGs, liquidity sweeps, ORB, pivots, Fibonacci), OPTIONS CHAIN if visible (IV rank, delta, bid/ask, volume/OI, call wall, put wall, gamma magnet, max pain, PCR), GREEKS (GEX regime, Vanna dynamics, Charm 0DTE, dealer flow), VOLATILITY (VIX, IV expansion/compression), SENTIMENT (risk-on/off context). Respond with RAW JSON ONLY — no markdown, no backticks: {"direction":"LONG CALL or LONG PUT or NO TRADE","confidence":84,"grade":"A+ or A or B or SKIP","verdict_sub":"one line setup description","contract":"SPY 585C — 0DTE","indicators":[{"icon":"📈","name":"Trend (EMA Stack)","value":"8 EMA > 21 EMA","signal":"bull"},{"icon":"💧","name":"VWAP","value":"Price above VWAP","signal":"bull"},{"icon":"⚡","name":"RSI","value":"58 — neutral","signal":"neut"},{"icon":"📊","name":"MACD","value":"Bullish crossover","signal":"bull"},{"icon":"🎯","name":"Gamma Regime","value":"Positive GEX — pinning","signal":"neut"},{"icon":"🌊","name":"Vanna Flow","value":"Vol compression = buy pressure","signal":"bull"},{"icon":"⏱","name":"Charm (0DTE)","value":"Delta decay favors calls","signal":"bull"},{"icon":"😱","name":"VIX","value":"18.5 — moderate fear","signal":"neut"},{"icon":"📉","name":"Put/Call Ratio","value":"0.72 — bullish","signal":"bull"},{"icon":"🧲","name":"Gamma Magnet","value":"585 strike — high OI","signal":"bull"},{"icon":"📐","name":"Support/Resistance","value":"584 holding","signal":"bull"},{"icon":"🔥","name":"IV Rank","value":"34% — normal","signal":"neut"}],"contract_details":[{"label":"Strike","value":"585C","color":"green"},{"label":"Expiry","value":"0DTE","color":"default"},{"label":"Delta Target","value":"0.40–0.50","color":"default"},{"label":"IV Rank","value":"34%","color":"default"},{"label":"Target","value":"+45%","color":"green"},{"label":"Stop","value":"-25%","color":"red"}],"summary":"2-3 sentence plain English trade reasoning referencing specific levels visible in the screenshot.","target":"+45%","stop":"-25%"}` });
+  if (chartData) content.push({ type:'image', source:{ type:'base64', media_type:chartData.type, data:chartData.base64 }});
+  if (chainData) content.push({ type:'image', source:{ type:'base64', media_type:chainData.type, data:chainData.base64 }});
+  content.push({ type:'text', text:`You are SPY Edge, an elite SPY options trading signal AI. Analyze the uploaded screenshot(s) across ALL categories: TREND (VWAP, EMA 8/21/100/200, HMA, BOS/CHOCH, Wyckoff), MOMENTUM (RSI, MACD, Squeeze), STRUCTURE (S/R, FVGs, liquidity sweeps, ORB, pivots, Fibonacci), OPTIONS CHAIN if visible (IV rank, delta, bid/ask, volume/OI, call wall, put wall, gamma magnet, max pain, PCR), GREEKS (GEX regime, Vanna, Charm, dealer flow), VOLATILITY (VIX, IV), SENTIMENT. Respond RAW JSON ONLY no markdown: {"direction":"LONG CALL or LONG PUT or NO TRADE","confidence":84,"grade":"A+ or A or B or SKIP","verdict_sub":"setup description","contract":"SPY 585C — 0DTE","indicators":[{"icon":"📈","name":"Trend","value":"Bullish EMA stack","signal":"bull"},{"icon":"💧","name":"VWAP","value":"Price above VWAP","signal":"bull"},{"icon":"⚡","name":"RSI","value":"58 neutral","signal":"neut"},{"icon":"📊","name":"MACD","value":"Bullish crossover","signal":"bull"},{"icon":"🎯","name":"Gamma Regime","value":"Positive GEX","signal":"neut"},{"icon":"🌊","name":"Vanna Flow","value":"Vol compression","signal":"bull"},{"icon":"⏱","name":"Charm 0DTE","value":"Favors calls","signal":"bull"},{"icon":"😱","name":"VIX","value":"18 moderate","signal":"neut"},{"icon":"📉","name":"Put/Call Ratio","value":"0.72 bullish","signal":"bull"},{"icon":"🧲","name":"Gamma Magnet","value":"585 high OI","signal":"bull"},{"icon":"📐","name":"Support","value":"584 holding","signal":"bull"},{"icon":"🔥","name":"IV Rank","value":"34% normal","signal":"neut"}],"contract_details":[{"label":"Strike","value":"585C","color":"green"},{"label":"Expiry","value":"0DTE","color":"default"},{"label":"Delta","value":"0.45","color":"default"},{"label":"IV Rank","value":"34%","color":"default"},{"label":"Target","value":"+45%","color":"green"},{"label":"Stop","value":"-25%","color":"red"}],"summary":"2-3 sentence plain English trade reasoning.","target":"+45%","stop":"-25%"}` });
+
   try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    // Use corsproxy.io to bypass CORS
+    const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://api.anthropic.com/v1/messages');
+    const resp = await fetch(proxyUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, messages: [{ role: 'user', content }] })
+      headers: { 'Content-Type': 'application/json', 'x-api-key': '', 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:1000, messages:[{ role:'user', content }] })
     });
-    clearInterval(stepInterval);
+    clearInterval(si);
     const data = await resp.json();
     if (!resp.ok) throw new Error(data.error?.message || 'API error');
-    const raw = data.content.map(b => b.text || '').join('');
-    const signal = JSON.parse(raw.replace(/```json|```/g, '').trim());
+    const signal = JSON.parse(data.content.map(b=>b.text||'').join('').replace(/```json|```/g,'').trim());
     renderResults(signal);
-  } catch (err) {
-    clearInterval(stepInterval);
+  } catch(err) {
+    clearInterval(si);
     document.getElementById('loading').classList.remove('active');
     const ec = document.getElementById('errorCard');
     ec.classList.add('active');
@@ -351,58 +320,42 @@ async function analyze() {
 
 function renderResults(s) {
   document.getElementById('loading').classList.remove('active');
-  const conf = parseInt(s.confidence) || 0;
-  const isCall = s.direction === 'LONG CALL';
-  const isPut = s.direction === 'LONG PUT';
+  const conf = parseInt(s.confidence)||0;
   const vc = document.getElementById('verdictCard');
-  vc.className = 'verdict-card ' + (isCall ? 'call' : isPut ? 'put' : 'hold');
-  document.getElementById('verdictDir').textContent = s.direction || 'NO TRADE';
-  document.getElementById('verdictSub').textContent = (s.verdict_sub || '').toUpperCase();
-  const tier = conf >= 88 ? 'high' : conf >= 80 ? 'medium' : 'low';
-  const cn = document.getElementById('confNumber');
-  cn.textContent = conf + '%';
-  cn.className = 'conf-number ' + tier;
-  setTimeout(() => {
-    const mf = document.getElementById('meterFill');
-    mf.style.width = conf + '%';
-    mf.className = 'meter-fill ' + tier;
-  }, 100);
+  vc.className = 'verdict-card '+(s.direction==='LONG CALL'?'call':s.direction==='LONG PUT'?'put':'hold');
+  document.getElementById('verdictDir').textContent = s.direction||'NO TRADE';
+  document.getElementById('verdictSub').textContent = (s.verdict_sub||'').toUpperCase();
+  const tier = conf>=88?'high':conf>=80?'medium':'low';
+  const cn = document.getElementById('confNumber'); cn.textContent=conf+'%'; cn.className='conf-number '+tier;
+  setTimeout(()=>{ const mf=document.getElementById('meterFill'); mf.style.width=conf+'%'; mf.className='meter-fill '+tier; },100);
   const gb = document.getElementById('gradeBadge');
-  const gradeMap = { 'A+': 'A-plus', 'A': 'A', 'B': 'B', 'SKIP': 'skip' };
-  gb.className = 'grade-badge ' + (gradeMap[s.grade] || 'skip');
-  gb.textContent = s.grade === 'A+' ? '⚡ A+ SIGNAL' : s.grade === 'A' ? '✅ A SIGNAL' : s.grade === 'B' ? '⚠ B SIGNAL' : '✗ SKIP';
-  const il = document.getElementById('indicatorList');
-  il.innerHTML = '';
-  (s.indicators || []).forEach(ind => {
-    const sigClass = ind.signal === 'bull' ? 'bull' : ind.signal === 'bear' ? 'bear' : 'neut';
-    const sigText = ind.signal === 'bull' ? '▲ BULL' : ind.signal === 'bear' ? '▼ BEAR' : '— NEUT';
-    il.innerHTML += `<div class="indicator-row"><div class="ind-left"><div class="ind-icon">${ind.icon}</div><div><div class="ind-name">${ind.name}</div><div class="ind-value">${ind.value}</div></div></div><div class="ind-signal ${sigClass}">${sigText}</div></div>`;
+  const gm = {'A+':'A-plus','A':'A','B':'B','SKIP':'skip'};
+  gb.className='grade-badge '+(gm[s.grade]||'skip');
+  gb.textContent = s.grade==='A+'?'⚡ A+ SIGNAL':s.grade==='A'?'✅ A SIGNAL':s.grade==='B'?'⚠ B SIGNAL':'✗ SKIP';
+  const il=document.getElementById('indicatorList'); il.innerHTML='';
+  (s.indicators||[]).forEach(ind=>{
+    const sc=ind.signal==='bull'?'bull':ind.signal==='bear'?'bear':'neut';
+    const st=ind.signal==='bull'?'▲ BULL':ind.signal==='bear'?'▼ BEAR':'— NEUT';
+    il.innerHTML+=`<div class="indicator-row"><div class="ind-left"><div class="ind-icon">${ind.icon}</div><div><div class="ind-name">${ind.name}</div><div class="ind-value">${ind.value}</div></div></div><div class="ind-signal ${sc}">${st}</div></div>`;
   });
-  document.getElementById('contractRec').textContent = s.contract || 'N/A';
-  const cd = document.getElementById('contractDetails');
-  cd.innerHTML = '';
-  (s.contract_details || []).forEach(d => {
-    const valClass = d.color === 'green' ? 'green' : d.color === 'red' ? 'red' : '';
-    cd.innerHTML += `<div class="detail-box"><div class="detail-label">${d.label}</div><div class="detail-value ${valClass}">${d.value}</div></div>`;
-  });
-  document.getElementById('summaryText').innerHTML = s.summary || '';
-  document.getElementById('riskRow').innerHTML = `<div class="risk-box"><div class="risk-label">🎯 Target</div><div class="risk-value target">${s.target || 'N/A'}</div></div><div class="risk-box"><div class="risk-label">🛑 Stop</div><div class="risk-value stop">${s.stop || 'N/A'}</div></div>`;
+  document.getElementById('contractRec').textContent=s.contract||'N/A';
+  const cd=document.getElementById('contractDetails'); cd.innerHTML='';
+  (s.contract_details||[]).forEach(d=>{ cd.innerHTML+=`<div class="detail-box"><div class="detail-label">${d.label}</div><div class="detail-value ${d.color==='green'?'green':d.color==='red'?'red':''}">${d.value}</div></div>`; });
+  document.getElementById('summaryText').innerHTML=s.summary||'';
+  document.getElementById('riskRow').innerHTML=`<div class="risk-box"><div class="risk-label">🎯 Target</div><div class="risk-value target">${s.target||'N/A'}</div></div><div class="risk-box"><div class="risk-label">🛑 Stop</div><div class="risk-value stop">${s.stop||'N/A'}</div></div>`;
   document.getElementById('results').classList.add('active');
 }
 
 function reset() {
-  chartData = null; chainData = null;
-  document.getElementById('chartBox').classList.remove('has-image');
-  document.getElementById('chainBox').classList.remove('has-image');
-  document.getElementById('chartPreview').src = '';
-  document.getElementById('chainPreview').src = '';
-  document.getElementById('chartInput').value = '';
-  document.getElementById('chainInput').value = '';
+  chartData=null; chainData=null;
+  ['chartBox','chainBox'].forEach(id=>document.getElementById(id).classList.remove('has-image'));
+  ['chartPreview','chainPreview'].forEach(id=>document.getElementById(id).src='');
+  ['chartInput','chainInput'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('results').classList.remove('active');
   document.getElementById('errorCard').classList.remove('active');
-  document.getElementById('uploadSection').style.display = '';
-  document.getElementById('analyzeBtn').style.display = '';
-  document.getElementById('analyzeBtn').disabled = true;
+  document.getElementById('uploadSection').style.display='';
+  document.getElementById('analyzeBtn').style.display='';
+  document.getElementById('analyzeBtn').disabled=true;
 }
 </script>
 </body>
